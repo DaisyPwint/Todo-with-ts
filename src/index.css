@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.checkbox{
+    appearance: none;
+    position: relative;
+    width: 23px;
+    height: 23px;
+    border-radius: 50px;
+    border: 1px solid #d1d5db;
+    cursor: pointer;
+}
+
+.checkbox:checked{
+    background: linear-gradient(to right,hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+    border:none;
+}
+
+.checkbox::before{
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 60%;
+    pointer-events: none;
+    background-image: url(./assets/icon-check.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}

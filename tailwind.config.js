@@ -8,13 +8,15 @@ module.exports = {
     fontFamily: {
       'sans': ['Josefin Sans']
     },
-    extend: {
-      backgroundImage: {
-        'my-gradient': 'linear-gradient(to right,hsl(192, 100%, 67%),hsl(280, 87%, 65%))'
-      }
+    colors: {
+      bgColor: 'var(--bgColor)',
+      cardColor: 'var(--cardColor)',
+      textColor: 'var(--textColor)',
+      darkTextColor: 'var(--darkTextColor)'
     }
   },
   plugins: [
     require('@tailwindcss/forms')
   ],
 }
+

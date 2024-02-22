@@ -2,14 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base{
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .light{
+        --bgColor: hsl(0, 0%, 98%);
+        --cardColor: hsl(0, 0%, 98%);
+        --textColor: hsl(236, 9%, 61%);
+        --darkTextColor: hsl(235, 19%, 35%);
+    }
+    .dark{
+        --bgColor: hsl(235, 21%, 11%);
+        --cardColor: hsl(235, 24%, 19%);
+        --textColor: hsl(233, 14%, 35%);
+        --darkTextColor: hsl(236, 33%, 92%);
+    }
+}
+
 .checkbox{
-    appearance: none;
     position: relative;
     width: 23px;
     height: 23px;
     border-radius: 50px;
-    border: 1px solid #d1d5db;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .checkbox:checked{
@@ -29,4 +48,8 @@
     background-image: url(./assets/icon-check.svg);
     background-size: contain;
     background-repeat: no-repeat;
+    opacity: 0;
+}
+.checkbox:checked::before{
+    opacity: 1;
 }
